@@ -1,0 +1,19 @@
+<!--Вывести сообщение равны или 2 объекта-->
+
+<script>
+    const obj = {
+        test: 8,
+        text: 9
+    };
+    const obj2 = {
+        test: 8, 
+        text: 9
+    };
+    
+    function compareFunc(object1, object2) {
+        return JSON.stringify(object1) === JSON.stringify(object2);
+    }
+
+    const t = compareFunc(obj, obj2);
+    console.log(t)
+</script>
