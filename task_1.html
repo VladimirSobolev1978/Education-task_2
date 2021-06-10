@@ -1,0 +1,46 @@
+<!--Даны две строки. Сравнить строки.
+  Вывести символы большей строки, на количество которых отличается.-->
+
+
+<!--
+**Input:**
+('text education part 2', 'text education')
+
+**Output:**
+' part 2'
+
+**Пример использования:**
+
+```
+function differenceSymbols(str1, str2) {
+// ....
+}
+const str1 = 'text education part 2';
+const str2 = 'text education';
+const result = differenceSymbols(str1, str2);
+console.log(result); // Выводит ' part 2'
+```
+-->
+
+<!--/*ЗАДАЧА 1*/-->
+<script>
+
+    const str1 = 'text education part 2';
+    const str2 = 'text education';
+
+    function differenceSymbols(string1, string2) {
+
+        string1 = str1.split(' ');
+        string2 = str2.split(' ');
+
+        return string1.filter(item => !string2.includes(item)).join(' ');
+
+
+    }
+
+
+    const t = differenceSymbols(str1, str2);
+    console.log(t)
+
+</script>
+<!--/*ЗАДАЧА 1*/-->

@@ -1,0 +1,22 @@
+<!--
+Дана строка; нужно написать функцию, которая позволяет
+вернуть значение true, если строка является палиндромом, и false — если нет.
+-->
+
+<!--/*ЗАДАЧА 1*/-->
+<script>
+    const str = 'testset';
+    const str11 = 'abbcsa';
+
+    function isPalindrome(str1) {
+        let string2 = str1.split('').reverse().join('');
+
+        return string2 === str1;
+
+    }
+
+    const t = isPalindrome(str);
+    console.log(t)
+
+</script>
+<!--/*ЗАДАЧА 1*/-->
