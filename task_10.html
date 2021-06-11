@@ -8,10 +8,10 @@
 
     function coincidenceFunc(string) {
         string = str.split('');
-        const arr = str[str.length-1];
+        const lastElem = str[str.length-1];
 
         return string.reduce((acc, current, index) => {
-            if (current === arr) {
+            if (current === lastElem) {
                 acc.push(index);
             }
             return acc;
