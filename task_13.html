@@ -1,0 +1,20 @@
+<!--Возвращает массив, где каждый элемент продублирован-->
+
+<!--/*ЗАДАЧА 11*/-->
+<script>
+    let arr1 = ['name', 'age', 'country'];
+    let arr2 = ['test', 25, 'RF'];
+
+    function objFunc(obj, obj2) {
+        const result = {};
+
+        obj.forEach(function (key, i){result[key] = obj2[i]});
+
+        return result;
+    }
+
+    const t = objFunc(arr1, arr2);
+    console.log(t)
+
+</script>
+<!--/*ЗАДАЧА 11*/-->
