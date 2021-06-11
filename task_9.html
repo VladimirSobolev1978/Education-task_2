@@ -7,21 +7,13 @@
     };
 
     const obj2 = {
-        text: 9,
-        test: 8
+        text: 8,
+        test: 9
     };
     
     function compareFunc(object1, object2) {
         object1 = JSON.stringify(obj);
         object2 = JSON.stringify(obj2);
-
-        if (!object1) {
-            object1 = '';
-        }
-
-        if (!object2) {
-            object2 = '';
-        }
 
         return (object1.split('').sort().join('') === object2.split('').sort().join(''));
     }
