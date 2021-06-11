@@ -1,0 +1,26 @@
+<!--
+Дана строка. Показать номера символов, совпадающих с последним символом строки.
+-->
+
+<!--/*ЗАДАЧА 10*/-->
+<script>
+    const str = 'test education part';
+
+    function coincidenceFunc(string) {
+        string = str.split('');
+        const arr = str[str.length-1];
+
+        return string.reduce((acc, current, index) => {
+            if (current === arr) {
+                acc.push(index);
+            }
+            return acc;
+        }, []);
+
+    }
+
+    const t = coincidenceFunc(str);
+    console.log(t)
+
+</script>
+<!--/*ЗАДАЧА 10*/-->
