@@ -1,0 +1,18 @@
+<!--
+Дан текст. Найти сумму имеющихся в нем цифр.
+-->
+
+<!--/*ЗАДАЧА 14*/-->
+<script>
+    const str = 'test455test786';
+
+function numeralFunc(number) {
+    return number.match(/\d/g).reduce((acc, curr) => acc + +curr, 0);
+
+}
+
+    const t = numeralFunc(str);
+    console.log(t)
+
+</script>
+<!--/*ЗАДАЧА 14*/-->
