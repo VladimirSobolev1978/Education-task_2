@@ -8,7 +8,7 @@
     let arr2 = ['test', 25, 'RF'];
 
     function objFunc(arr) {
-        return arr.reduce((acc, n, i) => ({...acc, [n]: arr2[i]}), {})
+        return arr.reduce((acc, curr, arr) => ({...acc, [curr]: arr2[arr]}), {})
     }
 
 
