@@ -5,17 +5,11 @@
 <!--/*ЗАДАЧА 20*/-->
 <script>
     const arr1 = [4, 7, 1, 9, 6, 8, 4, 6, 3, 6]
-    // const arr1 = ['text', 'education', 'part', 1, 1 , 'Text', 'Text']
+    // const arr1 = ['text', 'education', 'part', 'part', 1, 1 , 'Text', 'Text']
 
     function removeDuplicates(array) {
-        let result = {};
-
-        return array.filter(function (item) {
-            if (typeof item === 'string') {
-                return item === item.toLowerCase();
-            }
-            return item in result ? 0 : result[item] = 1;
-        })
+       // return [...new Set(array)];
+        return array.filter((item, curr) => array.indexOf(item) === curr);
     }
 
 
