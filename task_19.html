@@ -1,0 +1,19 @@
+<!--
+ Удалить из массива значения, индексы которых указаны во втором массиве
+-->
+
+<!--/*ЗАДАЧА 1*/-->
+<script>
+    const arr1 = [5, 2, 8, 6, 1, 9, 3, 6, 3, 7, 1];
+    const arr2 = [2, 5, 1];
+
+    function removeFunc(array1, array2) {
+        return array1.filter((item, index) => !array2.includes(index));
+    }
+
+
+    const t = removeFunc(arr1, arr2);
+    console.log(t)
+
+</script>
+<!--/*ЗАДАЧА 1*/-->
