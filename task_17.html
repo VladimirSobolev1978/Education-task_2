@@ -1,0 +1,17 @@
+<!--
+ Реализуйте функцию, которая принимает на вход объект и возвращает массив-пар.
+-->
+
+<!--/*ЗАДАЧА 1*/-->
+<script>
+    const obj = { 'dog': 6, 'cat': 11 };
+    
+    function coupleFunc(object) {
+        return Object.entries(object).map(([key, value]) => [key, value]);
+    }
+    
+    const t = coupleFunc(obj);
+    console.log(t)
+
+</script>
+<!--/*ЗАДАЧА 1*/-->
