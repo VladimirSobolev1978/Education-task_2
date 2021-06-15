@@ -6,7 +6,7 @@
     const arrBig = [5, 2, 8, 4, 8, 2, 5, 8, 2, 17, 8, 4, 2, 4, 7, 3];
 
     function uniqueFunc(array) {
-        return array.filter((value, index, arr) => arr.indexOf(value) === index);
+        return array.sort((a, b) => a - b).filter((value, index, arr) => arr.indexOf(value) === index);
     }
 
     const t = uniqueFunc(arrBig);
