@@ -10,7 +10,9 @@
     function objFunc(obj, obj2) {
         const result = {};
 
-        obj.forEach(function (key, i){result[key] = obj2[i]});
+        obj.forEach(function (key, i){
+            result[key] = obj2[i]
+        });
 
         return result;
     }
