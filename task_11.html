@@ -7,8 +7,8 @@
     let arr1 = ['name', 'age', 'country'];
     let arr2 = ['test', 25, 'RF'];
 
-    function objFunc(arr) {
-        return arr.reduce((acc, curr, arr) => ({...acc, [curr]: arr2[arr]}), {})
+    function objFunc(arr, arr2) {
+        return arr.reduce((acc, curr, arr) => ({...acc, [curr] : arr2[arr]}), {})
     }
 
 
