@@ -2,13 +2,13 @@
 
 <!--/*ЗАДАЧА 13*/-->
 <script>
-    const arr = [1, 2];
+    const arr = [1, 2, 5, 3, 4];
 
     // Output:
     // [1, 1, 2, 2]
 
     function doubleFunc(array) {
-       return array.concat(array).sort();
+       return array.concat(array).sort((a, b) => a - b);
     }
 
     const t = doubleFunc(arr);
