@@ -16,13 +16,17 @@
             return false
         }
 
+        if (Object.keys(object1).length !== Object.keys(object2).length) {
+            return  false
+        }
+
         if (typeof object1 === 'object' && typeof object2 === 'object') {
             if (Object.keys(object1).length === 0 && Object.keys(object2).length === 0) {
                 return true
             }
 
             for (let key in object1) {
-                if (Object.keys(object1).length !== Object.keys(object2).length || !Object.keys(object2).includes(key) || object1[key] !== object2[key]) {
+                if (!Object.keys(object2).includes(key) || object1[key] !== object2[key]) {
                     return false;
                 }
             }
