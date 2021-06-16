@@ -8,7 +8,9 @@
     // [1, 1, 2, 2]
 
     function doubleFunc(array) {
-       return array.concat(array).sort((a, b) => a - b);
+      return array.reduce((acc, curr) => {
+          return acc.concat([curr, curr])
+      }, [])
     }
 
     const t = doubleFunc(arr);
