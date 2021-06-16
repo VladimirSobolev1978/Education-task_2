@@ -1,0 +1,16 @@
+<!--6. Вернуть номер последнего элемента массива, который удовлетворяет условию-->
+<!--В функцию параметром передается массив и значение, больше которого нужно вывести значения из массива.-->
+
+<script>
+    let array = [5, 2, 7, 2, 5, 4, 1, 7, 8, 9, 4, 6, 3];
+    let number = 4;
+
+    function moreElements(arr, elem) {
+       return arr.filter(num => num > elem)
+    }
+
+    const t = moreElements(array, number);
+    console.log(t)
+
+</script>
+<!--/*ТРЕТЬЯ ЗАДАЧА*/-->
