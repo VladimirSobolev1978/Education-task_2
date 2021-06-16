@@ -1,0 +1,39 @@
+<!--13. В коллекции изменить значение свойства во всех элементах-->
+
+<!--Input:-->
+<!--([-->
+<!--{firstName: 'Test', lastName: 'Test1', age: 34},-->
+<!--{firstName: 'Text', lastName: 'Text1', age: 20},-->
+<!--{firstName: 'User', lastName: 'User1', age: 87}-->
+<!--]-->
+<!--, 'age' , 32)-->
+
+<!--Output:-->
+<!--[-->
+<!--{firstName: 'Test', lastName: 'Test1', age: 32},-->
+<!--{firstName: 'Text', lastName: 'Text1', age: 32},-->
+<!--{firstName: 'User', lastName: 'User1', age: 32}-->
+<!--]-->
+
+<script>
+    const obj1 = [
+        {firstName: 'Test', lastName: 'Test1', age: 34},
+        {firstName: 'Text', lastName: 'Text1', age: 20},
+        {firstName: 'User', lastName: 'User1', age: 87}
+    ]
+
+    const num = 32;
+
+    function replaceFunc(object1, number) {
+       return object1.map(value => {
+           value.age = number;
+           return value;
+       });
+    }
+
+
+    const t = replaceFunc(obj1, num);
+    console.log(t)
+
+
+</script>
