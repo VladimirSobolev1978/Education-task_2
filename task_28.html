@@ -1,0 +1,32 @@
+<!--12. Преобразовать коллекцию в другой вид-->
+
+<!--Input:-->
+<!--[-->
+<!--{firstName: 'Test', lastName: 'Test1', age: 34},-->
+<!--{firstName: 'Text', lastName: 'Text1', age: 20},-->
+<!--{firstName: 'User', lastName: 'User1', age: 87}-->
+<!--]-->
+
+<!--Output:-->
+<!--[-->
+<!--{fullName: 'Test Test1', age 34},-->
+<!--{fullName: 'Text Text1', age 20},-->
+<!--{fullName: 'User User1', age 87},-->
+<!--]-->
+
+<script>
+    const arr = [
+        {firstName: 'Test', lastName: 'Test1', age: 34},
+        {firstName: 'Text', lastName: 'Text1', age: 20},
+        {firstName: 'User', lastName: 'User1', age: 87}
+    ]
+
+    function splitFunc(array) {
+      return array.map((item) => {
+          return {fullName: item.firstName + ' ' + item.lastName, age: item.age}
+      })
+    }
+
+    const t = splitFunc(arr);
+    console.log(t)
+</script>
