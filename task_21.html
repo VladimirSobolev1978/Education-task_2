@@ -1,0 +1,25 @@
+<!--Создайте функцию, которая параметром принимает объект. Функция умножает все числовые свойства объекта на 2.-->
+
+<!--/*ЗАДАЧА 21*/-->
+<script>
+    const obj = {
+        name: 'test',
+        age: 25,
+        weight: 65,
+        height: 165
+    }
+    
+    function multiplyFunc(object) {
+        for (let key in object) {
+            if (typeof object[key] === 'number') {
+                object[key] *= 2;
+            }
+        }
+        return object;
+    }
+
+    const t = multiplyFunc(obj);
+    console.log(t)
+
+</script>
+<!--/*ЗАДАЧА 21*/-->
