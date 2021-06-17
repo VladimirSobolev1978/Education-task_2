@@ -1,0 +1,30 @@
+<!--16. Напишите функцию, которая четное число возводит в квадрат, а нечетное в куб. После умножает это значение на 2-й параметр. -->
+<!--Прибавляет 3-й и находит корень от получившегося результата, округленный до сотых. Но за счет того, что функция вызывает функцию.-->
+
+<script>
+
+
+    function numFunc(num1) {
+        return (num2) => {
+            return (num3) => {
+
+                let result;
+
+                if (num1 % 2) {
+                    result = Math.pow(num1, 3);
+                }
+                if (num1 % 2 === 0) {
+                    result = Math.pow(num1, 2);
+                }
+
+                return  Math.sqrt(result * num2 + num3).toFixed(2);
+            }
+        }
+
+    }
+
+
+
+    const t = numFunc(17)(6)(2);
+    console.log(t)
+</script>
