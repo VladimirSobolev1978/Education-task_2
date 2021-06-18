@@ -1,0 +1,35 @@
+<!--Дана строка. Разделить строку на фрагменты по три подряд идущих символа.
+В каждом фрагменте средний символ заменить на случайный символ,
+не совпадающий ни с одним из символов этого фрагмента. Показать фрагменты, упорядоченные по алфавиту.-->
+
+<!--Input:-->
+<!--'test education part 2'-->
+
+<!--Output:-->
+<!--["ai", 'd_c', 'o ', 'p_r', 't_2', 't_e', 't_s']-->
+
+<script>
+    const str = 'test education part 2';
+
+    function makeid(string) {
+        let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXY_+Zabcdefghijklmn#*opqrstuvwxyz0123456789'.split('').filter(item => !string.includes(item));
+        let charactersLength = characters.length;
+
+        const randomIndex = Math.floor(Math.random() * charactersLength)
+        return characters[randomIndex];
+    }
+
+    function splitFunc(string) {
+        let newString = '';
+        newString = string.split();
+        newString = string.match(/.{1,3}/g);
+
+        return newString.map(item => [item[0], makeid(string) , item[2]].join('')).sort();
+
+    }
+
+
+    const t = splitFunc(str);
+    console.log(t)
+</script>
+
