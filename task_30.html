@@ -4,15 +4,26 @@
 Убедитесь, что функция range() работает с отрицательным шагом.-->
 
 <script>
-    const range = (elem, item) => {
-        if (elem > item) {
-            return range(item, elem).reverse();
+    function range(start, end, step) {
+        let array = [];
+        let current = start;
+
+        step = step || 1;
+        if (step > 0) {
+            while (current <= end) {
+                array.push(current);
+                current += step;
+            }
         } else {
-            return elem === item ? [item] : [elem, ...range(elem + 1, item)];
+            while (current >= end) {
+                array.push(current);
+                current += step;
+            }
         }
+        return array;
     }
 
 
-    // console.log(range(4,16));
-    console.log(range(5, 2,-1))
+    console.log(range(4, 16, 2));
+    // console.log(range(5, 2, -2))
 </script>
