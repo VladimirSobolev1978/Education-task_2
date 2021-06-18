@@ -22,8 +22,8 @@
     ]
 
     function splitFunc(array) {
-      return array.map((item) => {
-          return {fullName: item.firstName + ' ' + item.lastName, age: item.age}
+      return array.map((currentValue) => {
+          return {fullName: currentValue.firstName + ' ' + currentValue.lastName, age: currentValue.age}
       })
     }
 
