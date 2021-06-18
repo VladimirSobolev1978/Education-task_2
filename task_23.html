@@ -3,14 +3,14 @@
 <!--Например, в коллекции мне нужно вывести значения, в которых возраст больше 18.-->
 
 <script>
-    let arr = [
+    const arr = [
         {name: 'test', age: 34, country: 'RF'},
         {name: 'test2', age: 12, country: 'RF'},
         {name: 'test1', age: 54, country: 'RF'}
     ]
 
     function filterFunc(array) {
-        return array.filter(key => key.age > 18);
+        return array.filter(element => element.age > 18);
     }
 
 
