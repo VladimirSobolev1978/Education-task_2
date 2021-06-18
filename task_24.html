@@ -25,9 +25,9 @@
     const num = 32;
 
     function replaceFunc(object1, number) {
-       return object1.map(value => {
-           value.age = number;
-           return value;
+       return object1.map(currentValue => {
+           currentValue.age = number;
+           return currentValue;
        });
     }
 
