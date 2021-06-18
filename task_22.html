@@ -7,7 +7,15 @@
     const string2 = 'text';
 
     function lengthFunc(str1, str2) {
-       return str1.includes(str2);
+        let bigStr, smallStr;
+        if (str1.length > str2.length) {
+            bigStr = str1;
+            smallStr = str2;
+        } else {
+            smallStr = str1;
+            bigStr = str2;
+        }
+       return bigStr.includes(smallStr);
     }
 
     const t = lengthFunc(string1, string2);
